@@ -1,3 +1,4 @@
+#include "Sales_item.h"
 #include <iostream>
 
 int main0() {
@@ -40,7 +41,7 @@ int main3() {
   return 0;
 }
 
-int main() {
+int main4() {
   int sum = 0, value = 0;
 
   // 当使用iostream作为条件时，其效果是检测流的状态，如果流是有效的，即为遇到错误，则检测成功。当遇到【文件结束符】，
@@ -50,5 +51,20 @@ int main() {
     sum += value;
   }
   std::cout << "Sum is: " << sum << std::endl;
+  return 0;
+}
+
+int main() {
+  int currVal = 0, val = 0;
+  if (std::cin >> currVal) {
+    int cnt = 1;
+    while (std::cin >> val) {
+      if (val == currVal) {
+        ++cnt;
+      } else {
+        std::cout << currVal << " occurs " << cnt << " times" << std::endl;
+      }
+    }
+  }
   return 0;
 }
