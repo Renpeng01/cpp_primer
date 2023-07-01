@@ -66,13 +66,38 @@ int main2() {
   // std::cout << d << std::endl;
 
   long double ld = 3.11111111;
-  int e{ld}, b{ld}; // 错误 转换执行失败，因为存在丢失信息的风险
+  // int e{ld}, b{ld}; // 错误 转换执行失败，因为存在丢失信息的风险
   int f(ld), g = ld; // 正确 执行转换，且信息丢失
+  return 0;
 }
 
 // 习题2.9
-int main() {
+int main3() {
   long double ld = 3.11111111;
-  int i{1.1111};
+  // int i{1.1111};
+  return 0;
+}
+
+int main() {
+  int ival = 1024;
+  int &refVal = ival;
+  int &ref1Val = refVal;
+
+  std::cout << "ival: " << ival << std::endl;
+  std::cout << "refVal: " << refVal << std::endl;
+  std::cout << "ref1Val: " << ref1Val << std::endl;
+
+  ref1Val = 1;
+
+  std::cout << "ival: " << ival << std::endl;
+  std::cout << "refVal: " << refVal << std::endl;
+  std::cout << "ref1Val: " << ref1Val << std::endl;
+
+  ival = 3;
+
+  std::cout << "ival: " << ival << std::endl;
+  std::cout << "refVal: " << refVal << std::endl;
+  std::cout << "ref1Val: " << ref1Val << std::endl;
+
   return 0;
 }
