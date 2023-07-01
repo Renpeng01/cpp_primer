@@ -33,8 +33,8 @@ int main0() {
   return 0;
 }
 
-// 习题 2。1.2
-int main() {
+// 习题 2.3
+int main1() {
   unsigned u = 10, u2 = 42;
 
   std::cout << u2 - u << std::endl; // 猜测值 32
@@ -50,5 +50,29 @@ int main() {
   std::cout << i - i2 << std::endl;
   std::cout << i - u << std::endl;
   std::cout << u - i << std::endl;
+  return 0;
+}
+
+// 变量初始化
+int main2() {
+  // int a = 1;
+  // int b = {1};
+  // int c{1};
+  // int d(1);
+
+  // std::cout << a << std::endl;
+  // std::cout << b << std::endl;
+  // std::cout << c << std::endl;
+  // std::cout << d << std::endl;
+
+  long double ld = 3.11111111;
+  int e{ld}, b{ld}; // 错误 转换执行失败，因为存在丢失信息的风险
+  int f(ld), g = ld; // 正确 执行转换，且信息丢失
+}
+
+// 习题2.9
+int main() {
+  long double ld = 3.11111111;
+  int i{1.1111};
   return 0;
 }
