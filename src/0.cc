@@ -16,7 +16,7 @@ int main1() {
   std::cin >> v1 >> v2;
 
   // std::endl 结束当前行，并将与设备关联的缓冲区中的内容刷到设备中
-  std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2
+  std::cout << "The su m of " << v1 << " and " << v2 << " is " << v1 + v2
             << std::endl;
   return 0;
 }
