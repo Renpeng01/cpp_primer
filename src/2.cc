@@ -1,5 +1,6 @@
 #include <bitset>
 #include <iostream>
+#include <typeinfo>
 
 int main0() {
   int a = -1;
@@ -78,7 +79,7 @@ int main3() {
   return 0;
 }
 
-int main() {
+int main4() {
   int ival = 1024;
   int &refVal = ival;
   int &ref1Val = refVal;
@@ -98,6 +99,31 @@ int main() {
   std::cout << "ival: " << ival << std::endl;
   std::cout << "refVal: " << refVal << std::endl;
   std::cout << "ref1Val: " << ref1Val << std::endl;
+
+  return 0;
+}
+
+int main5() {
+  const int bufSize = 512;
+  int const bufSize2 = 1;
+  return 0;
+}
+// 习题 2.35
+int main() {
+  const int i = 42;
+  auto j = i;
+  const auto &k = i;
+  auto *p = &i;
+  const auto j2 = i, &k2 = i;
+
+  std::cout << typeid(i).name() << std::endl;
+  std::cout << typeid(k).name() << std::endl;
+
+  std::cout << typeid(j).name() << std::endl;
+  std::cout << typeid(p).name() << std::endl;
+
+  std::cout << typeid(j2).name() << std::endl;
+  std::cout << typeid(k2).name() << std::endl;
 
   return 0;
 }
