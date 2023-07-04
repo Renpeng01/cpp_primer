@@ -1,6 +1,7 @@
 #include <cctype>
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main0() {
   std::string s;
@@ -28,7 +29,7 @@ int main1() {
   return 0;
 }
 
-int main() {
+int main2() {
   std::string s("Hello World!!!!");
   decltype(s.size()) punct_cnt = 0;
 
@@ -39,5 +40,25 @@ int main() {
   }
 
   std::cout << punct_cnt << std::endl;
+  return 0;
+}
+
+int main() {
+  std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+  for (auto &a : v) {
+    std::cout << a << std::endl;
+  }
+
+  std::cout << "-----------" << std::endl;
+
+  for (auto &a : v) {
+    a *= a;
+  }
+
+  for (auto &a : v) {
+    std::cout << a << std::endl;
+  }
+
   return 0;
 }
