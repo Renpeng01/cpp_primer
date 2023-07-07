@@ -43,7 +43,7 @@ int main2() {
   return 0;
 }
 
-int main() {
+int main3() {
   std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
   for (auto &a : v) {
@@ -61,4 +61,10 @@ int main() {
   }
 
   return 0;
+}
+
+int main() {
+  // int a[] = {0, 1, 2};
+  // int a2[]; // 错误
+  // a2 = a;   // 错误
 }
