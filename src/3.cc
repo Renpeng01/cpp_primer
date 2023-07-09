@@ -63,8 +63,29 @@ int main3() {
   return 0;
 }
 
+int main4() {
+  int iap[] = {0, 2, 4, 6, 8};
+  int i = *(iap + 2); // iap[2] = (ia + 2)
+  std::cout << i << std::endl;
+  return 0;
+}
+
 int main() {
-  // int a[] = {0, 1, 2};
-  // int a2[]; // 错误
-  // a2 = a;   // 错误
+  constexpr size_t row_cnt = 3, col_cnt = 4;
+  int ia[row_cnt][col_cnt];
+
+  size_t cnt = 0;
+  for (auto &row : ia) {
+    for (auto &col : row) {
+      col = cnt;
+      ++cnt;
+    }
+  }
+
+  for (auto row : ia) {
+    for (auto col : row) {
+      std::cout << col << std::endl;
+    }
+  }
+  return 0;
 }
