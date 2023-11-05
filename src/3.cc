@@ -56,7 +56,8 @@ int main6() {
 int main() {
   int ia[3][4] = {0, 1, 2, 3, 4, 5, 6, 7};
   for (auto row : ia) {
-    for (auto col : row) {
+    for (auto col : row) { // 无法编译，外层的for中
+                           // row必须是引用，否则这里会被当做指针而无法编译
     }
   }
 }
