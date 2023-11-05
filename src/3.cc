@@ -48,7 +48,15 @@ int main5() {
   int(&arrRef)[10] = arr;  // arrRef 引用一个含有10个整数的数组
 }
 
-int main() {
+int main6() {
   char ca[] = {'C', '+', '+'};
   std::cout << strlen(ca) << std::endl;
+}
+
+int main() {
+  int ia[3][4] = {0, 1, 2, 3, 4, 5, 6, 7};
+  for (auto row : ia) {
+    for (auto col : row) {
+    }
+  }
 }
