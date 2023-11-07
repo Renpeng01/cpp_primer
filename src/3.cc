@@ -61,3 +61,6 @@ int main() {
     }
   }
 }
+
+[map [range:map [lastActivity:map [gte:1696734334 lt:1699326334]]]]
+    [map [range:map [lastActivity:map [gte:1696734334 lt:1699326334]]]]
